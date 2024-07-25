@@ -17,14 +17,14 @@ repositories {
 	mavenCentral()
 }
 
-dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	runtimeOnly 'com.h2database:h2'
-	runtimeOnly 'org.postgresql:postgresql'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-}
+dependencies {  
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'  
+    implementation 'org.springframework.boot:spring-boot-starter-web'  
+    runtimeOnly 'com.h2database:h2' // ou outro banco de dados que você estiver usando  
+    runtimeOnly 'org.postgresql:postgresql' // se você estiver usando PostgreSQL  
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'  
+    testImplementation 'org.junit.jupiter:junit-jupiter-api' // para testes  
+}  
 
 tasks.named('test') {
 	useJUnitPlatform()
